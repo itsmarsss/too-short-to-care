@@ -1,10 +1,28 @@
-html {
+html,
+body {
     font-family: Consolas;
     width: 100vw;
     height: 100vh;
+    padding: 0;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 300px;
+    height: 100%;
 }
 
 #progress_section {
@@ -17,4 +35,8 @@ html {
 
 #progress {
     width: 100%;
+}
+
+.minor {
+    font-size: 15px;
 }
