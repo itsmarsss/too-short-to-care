@@ -41,15 +41,23 @@ function saveSettings() {
 }
 
 function setAll() {
+    year.value = getCookie("year") || 2000
+    month.value = getCookie("month") || 1
+    day.value = getCookie("day") || 1
+    hour.value = getCookie("hour") || 0
+    minute.value = getCookie("minute") || 0
+    second.value = getCookie("second") || 0
+    life_expectancy.value = getCookie("life_expectancy") || 80
+
     startDate = new Date(
-        getCookie("year") || 2000,
-        getCookie("month") || 1,
-        getCookie("day") || 1,
-        getCookie("hour") || 0,
-        getCookie("minute") || 0,
-        getCookie("second") || 0
+        year.value,
+        month.value,
+        day.value,
+        hour.value,
+        minute.value,
+        second.value
     );
-    death = getCookie("life_expectancy") || 80;
+    death = life_expectancy.value;
 }
 
 setAll();
