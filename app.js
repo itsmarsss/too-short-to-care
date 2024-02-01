@@ -2,6 +2,7 @@ var startDate;
 var death;
 
 const age_curr = document.getElementById("age_curr");
+const expected = document.getElementById("expected");
 const percent_curr = document.getElementById("percent_curr");
 const progress = document.getElementById("progress");
 
@@ -58,6 +59,7 @@ function setAll() {
         second.value
     );
     death = life_expectancy.value;
+    expected.textContent = death;
 }
 
 setAll();
