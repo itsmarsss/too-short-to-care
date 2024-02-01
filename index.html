@@ -38,16 +38,16 @@
     <div id="settings_pane">
         <div class="settings_pane_section">
             Birthday:
-            <input id="year" placeholder="year" type="number">
-            <input id="month" placeholder="month" type="number">
-            <input id="day" placeholder="day" type="number">
-            <input id="hour" placeholder="hour" type="number">
-            <input id="minute" placeholder="minute" type="number">
-            <input id="second" placeholder="second" type="number">
+            <div>Year<br /><input id="year" placeholder="year" type="number"></div>
+            <div>Month<br /><input id="month" placeholder="month" type="number"></div>
+            <div>Day<br /><input id="day" placeholder="day" type="number"></div>
+            <div>Hour<br /><input id="hour" placeholder="hour" type="number"></div>
+            <div>Month<br /><input id="minute" placeholder="minute" type="number"></div>
+            <div>Second<br /><input id="second" placeholder="second" type="number"></div>
         </div>
         <div class="settings_pane_section">
             Death:
-            <input id="life_expectancy" placeholder="life expectancy" type="number">
+            <div>Life expectancy<br /><input id="life_expectancy" placeholder="life expectancy" type="number"></div>
         </div>
 
         <button id="save" onclick="saveSettings()">Save</button>
@@ -57,6 +57,10 @@
                 close
             </span>
         </button>
+    </div>
+
+    <div id="first_time_pane">
+        &lt;&lt;&lt; This seems to be your first time on this site... Configure your age and expected death here...!
     </div>
 </body>
 

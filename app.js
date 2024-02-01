@@ -7,6 +7,7 @@ const percent_curr = document.getElementById("percent_curr");
 const progress = document.getElementById("progress");
 
 const settings_pane = document.getElementById("settings_pane");
+const first_time_pane = document.getElementById("first_time_pane");
 
 const year = document.getElementById("year");
 const month = document.getElementById("month");
@@ -30,6 +31,7 @@ function toggleSettings() {
 }
 
 function saveSettings() {
+    first_time_pane.classList.remove("visible");
     setCookie("year", year.value, 365);
     setCookie("month", month.value, 365);
     setCookie("day", day.value, 365);
@@ -42,7 +44,11 @@ function saveSettings() {
 }
 
 function setAll() {
-    year.value = getCookie("year") || 2000
+    var test = getCookie("year");
+    if (test == null) {
+        first_time_pane.classList.add("visible");
+    }
+    year.value = test || 2000
     month.value = getCookie("month") || 1
     day.value = getCookie("day") || 1
     hour.value = getCookie("hour") || 0
