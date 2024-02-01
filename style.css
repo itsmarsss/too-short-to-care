@@ -16,7 +16,8 @@ h1 {
     margin: 0;
 }
 
-input {
+input,
+button {
     padding: 10px;
     border-radius: 15px;
     border: none;
@@ -105,6 +106,16 @@ input:focus {
     align-items: center;
     gap: 5px;
     width: 300px;
+}
+
+#save {
+    cursor: pointer;
+    box-shadow: #959da56f 0px 8px 24px;
+    transition: 150ms;
+}
+
+#save:hover {
+    transform: translateY(-3px);
 }
 
 .visible {

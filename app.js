@@ -1,10 +1,19 @@
-var startDate = new Date(2000, 1, 1, 0, 0, 0);
-var death = getCookie("death") || 80;
+var startDate;
+var death;
 
 const age_curr = document.getElementById("age_curr");
 const percent_curr = document.getElementById("percent_curr");
 const progress = document.getElementById("progress");
+
 const settings_pane = document.getElementById("settings_pane");
+
+const year = document.getElementById("year");
+const month = document.getElementById("month");
+const day = document.getElementById("day");
+const hour = document.getElementById("hour");
+const minute = document.getElementById("minute");
+const second = document.getElementById("second");
+const life_expectancy = document.getElementById("life_expectancy");
 
 setInterval(() => {
     const currDate = new Date();
@@ -18,6 +27,32 @@ setInterval(() => {
 function toggleSettings() {
     settings_pane.classList.toggle("visible");
 }
+
+function saveSettings() {
+    setCookie("year", year.value, 365);
+    setCookie("month", month.value, 365);
+    setCookie("day", day.value, 365);
+    setCookie("hour", hour.value, 365);
+    setCookie("minute", minute.value, 365);
+    setCookie("second", second.value, 365);
+    setCookie("life_expectancy", life_expectancy.value, 365);
+    toggleSettings();
+    setAll();
+}
+
+function setAll() {
+    startDate = new Date(
+        getCookie("year") || 2000,
+        getCookie("month") || 1,
+        getCookie("day") || 1,
+        getCookie("hour") || 0,
+        getCookie("minute") || 0,
+        getCookie("second") || 0
+    );
+    death = getCookie("life_expectancy") || 80;
+}
+
+setAll();
 
 function setCookie(name, value, days) {
     var expires = "";
