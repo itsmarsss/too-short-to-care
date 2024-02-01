@@ -4,6 +4,7 @@ var death = getCookie("death") || 80;
 const age_curr = document.getElementById("age_curr");
 const percent_curr = document.getElementById("percent_curr");
 const progress = document.getElementById("progress");
+const settings_pane = document.getElementById("settings_pane");
 
 setInterval(() => {
     const currDate = new Date();
@@ -13,6 +14,10 @@ setInterval(() => {
     progress.max = (death * 365 * 24 * 60 * 60 * 1000);
     progress.value = diffInMs;
 }, 1);
+
+function toggleSettings() {
+    console.log(1);
+}
 
 function setCookie(name, value, days) {
     var expires = "";

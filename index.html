@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <button id="settings">
+    <button id="settings" onclick="toggleSettings()">
         <span class="material-symbols-outlined">
             settings
         </span>
@@ -32,6 +32,22 @@
             <span class="material-symbols-outlined">
                 deceased
             </span>
+        </div>
+    </div>
+
+    <div id="settings_pane">
+        <div class="settings_pane_section">
+            Birthday:
+            <input placeholder="year">
+            <input placeholder="month">
+            <input placeholder="day">
+            <input placeholder="hour">
+            <input placeholder="minute">
+            <input placeholder="second">
+        </div>
+        <div class="settings_pane_section">
+            Death:
+            <input placeholder="life expectancy">
         </div>
     </div>
 </body>
