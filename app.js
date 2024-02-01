@@ -16,7 +16,7 @@ setInterval(() => {
 }, 1);
 
 function toggleSettings() {
-    console.log(1);
+    settings_pane.classList.toggle("visible");
 }
 
 function setCookie(name, value, days) {

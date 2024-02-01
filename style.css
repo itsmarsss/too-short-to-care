@@ -8,6 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 h1 {
@@ -27,10 +28,9 @@ input:focus {
     outline: 3px solid #000000;
 }
 
-#settings {
+.settings_buttons {
     position: fixed;
     top: 0;
-    left: 0;
     border: 0;
     padding: 0;
     background: transparent;
@@ -44,8 +44,16 @@ input:focus {
     transform-origin: center;
 }
 
-#settings:hover {
+.settings_buttons:hover {
     transform: rotate(90deg) scale(1.1);
+}
+
+#settings {
+    left: 0;
+}
+
+#close {
+    right: 0;
 }
 
 #container {
@@ -75,6 +83,8 @@ input:focus {
 }
 
 #settings_pane {
+    visibility: hidden;
+    opacity: 0;
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -85,6 +95,7 @@ input:focus {
     backdrop-filter: blur(3px);
     width: 100%;
     height: 100%;
+    transition: 200ms;
 }
 
 .settings_pane_section {
@@ -94,4 +105,9 @@ input:focus {
     align-items: center;
     gap: 5px;
     width: 300px;
+}
+
+.visible {
+    visibility: visible !important;
+    opacity: 1 !important;
 }
