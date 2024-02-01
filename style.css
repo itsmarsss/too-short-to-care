@@ -107,6 +107,11 @@ input:focus {
     margin-top: 50px;
     gap: 10px;
     width: 300px;
+    background: #a8a8a873;
+    backdrop-filter: blur(3px);
+    border-radius: 25px;
+    padding: 20px 10px;
+    box-shadow: #959da56f 0px 8px 24px;
 }
 
 .settings_pane_section>div {
@@ -117,7 +122,7 @@ input:focus {
 }
 
 #save {
-    margin-top: 50px;
+    margin: 50px 0;
     cursor: pointer;
     box-shadow: #959da56f 0px 8px 24px;
     transition: 150ms;
