@@ -89,13 +89,13 @@ input:focus {
     position: absolute;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 50px;
     background: #0000002c;
     backdrop-filter: blur(3px);
     width: 100%;
     height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
     transition: 200ms;
 }
 
@@ -104,15 +104,20 @@ input:focus {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 50px;
     gap: 10px;
     width: 300px;
 }
 
 .settings_pane_section>div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
     font-size: 13px;
 }
 
 #save {
+    margin-top: 50px;
     cursor: pointer;
     box-shadow: #959da56f 0px 8px 24px;
     transition: 150ms;
