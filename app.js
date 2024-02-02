@@ -28,6 +28,7 @@ setInterval(() => {
 
 function toggleSettings() {
     settings_pane.classList.toggle("visible");
+    setAll();
 }
 
 function saveSettings() {
